@@ -22,11 +22,22 @@ body {
     -webkit-border-radius: 2%;
     border-radius: 2%;
 }
+.quote {
+    text-align: center;
+}
 .attribution {
     font-size: .7em;
     text-align: right;
     margin-top: 5px;
 }
+#attribution-hyphen {
+}
+#attribution-text {
+    float: right;
+    display: inline-block;
+    margin-left: 5px;
+}
+
 .actions {
     margin-top: 15px;
 }
