@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "quote": "First quote",
+    "attribute": "First attribution"
+  },
+  {
+    "id": 1,
+    "quote": "Second quote",
+    "attribute": "Second attribution"
+  },
+  {
+    "id": 2,
+    "quote": "Third quote",
+    "attribute": "Third attribution"
+  }
+]
