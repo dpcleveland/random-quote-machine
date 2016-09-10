@@ -1,13 +1,21 @@
 $(document).ready(function() {
     $("#new-quote").on("click", function(){
         $.getJSON("/dynamic/json/quotes.json", function(json) {
-            var html = "";
+            var quoteText = "";
+            var attributeText = "";
 
-            json.forEach(function(val) {
-                html += val.quote;
+            json = json.filter(function(val) {
+                return (val.id == Math.floor(Math.random() * (json.length - 1)));
             });
 
-            $("#quote-text").html(html);
+            json.forEach(function(val) {
+                quoteText += "<i class='fa fa-quote-left' aria-hidden='true'></i> ";
+                quoteText += val.quote;
+                attributeText += val.attribute;
+            });
+
+            $("#quote-text").html(quoteText);
+            $("#attribution-text").html(attributeText);
         });
     });
 });
