@@ -23,11 +23,12 @@ $(document).ready(function() {
                 newBackgroundColor = val.color;
             });
 
-            $("#quote-text").html(quoteText);
-            $("#attribution-text").html(attributeText);
+            $('#quote-text').html(quoteText);
+            $('#attribution-text').html(attributeText);
             $('body').css('background-color', newBackgroundColor);
             $('.actions button').css('background-color', newBackgroundColor);
             $('.social ul li').css('background', newBackgroundColor);
+            //$('#twitter-share').attr('data-text', "test");
         });
     });
 });
