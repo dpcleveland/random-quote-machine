@@ -93,11 +93,13 @@ var quotesArray = [
 
 $(document).ready(function() {
     $("#new-quote").on("click", function(){
+
             var quoteText = "";
             var attributeText = "";
             var totalQuotes = quotesArray.length;
             var newBackgroundColor = "";
             var returnedQuote = "";
+            var quoteImage = "<i class='fa fa-quote-left' aria-hidden='true'></i> ";
 
             function randomQuote() {
                 return Math.floor(Math.random() * (totalQuotes));
@@ -110,17 +112,16 @@ $(document).ready(function() {
             });
 
             returnedQuote.forEach(function(val) {
-                quoteText += "<i class='fa fa-quote-left' aria-hidden='true'></i> ";
                 quoteText += val.quote;
                 attributeText += val.attribute;
                 newBackgroundColor = val.color;
             });
 
-            $('#quote-text').html(quoteText);
+            $('#quote-text').html(quoteImage + quoteText);
             $('#attribution-text').html(attributeText);
             $('body').css('background-color', newBackgroundColor);
             $('.actions button').css('background-color', newBackgroundColor);
             $('.social ul li').css('background', newBackgroundColor);
-            //$('#twitter-share').attr('data-text', "test");
+            $('#twitter-share').attr('href', 'https://twitter.com/intent/tweet?text=' + quoteText + ' - ' + attributeText);
     });
 });
